@@ -8,11 +8,13 @@ module.exports = function(env, argv) {
       ? './src/index.js'
       : './resources/test-script.js',
     output: {
-      path: path.resolve(__dirname, 'dist'),
-      filename: 'bundle.js'
+      path: path.resolve(__dirname, 'lib'),
+      filename: 'bundle.js',
+      library: 'ReactButton',
+      libraryTarget: 'umd'
     },
 
-    devtool: isProduction ? 'source-map' : 'cheap-module-source-map',
+    devtool: isProduction ? false : 'cheap-module-source-map',
 
     module: {
       rules: [
@@ -69,7 +71,7 @@ module.exports = function(env, argv) {
 
     devServer: {
       port: 8080,
-      contentBase: path.resolve(__dirname, 'dist')
+      contentBase: path.resolve(__dirname, 'lib')
     }
   }
 };

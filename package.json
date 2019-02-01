@@ -2,7 +2,8 @@
   "name": "react-button",
   "version": "1.0.0",
   "description": "Configurable react button",
-  "main": "index.js",
+  "main": "lib/bundle.js",
+  "module": "src/index.js",
   "scripts": {
     "build": "webpack --mode=production",
     "start": "webpack-dev-server --hot --mode=development",
@@ -27,6 +28,10 @@
     "react": "^16.7.0",
     "react-dom": "^16.7.0"
   },
+  "files": [
+    "/lib",
+    "/src"
+  ],
   "devDependencies": {
     "@babel/core": "^7.2.2",
     "@babel/plugin-proposal-class-properties": "^7.3.0",
@@ -36,13 +41,12 @@
     "babel-loader": "^8.0.5",
     "css-loader": "^2.1.0",
     "file-loader": "^3.0.1",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
     "style-loader": "^0.23.1",
     "webpack": "^4.29.0",
     "webpack-cli": "^3.2.1",
     "webpack-dev-server": "^3.1.14"
   },
-  "dependencies": {
-    "react": "^16.7.0",
-    "react-dom": "^16.7.0"
-  }
+  "sideEffects": false
 }
