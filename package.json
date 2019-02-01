@@ -1,5 +1,5 @@
 {
-  "name": "react-button",
+  "name": "react-button-test-publish-to-npmjs",
   "version": "1.0.0",
   "description": "Configurable react button",
   "main": "lib/bundle.js",
