@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './Button.css';
+import * as helpers from '../../helpers';
 
 export class Button extends React.Component {
   constructor(props) {
@@ -22,6 +23,8 @@ export class Button extends React.Component {
         onClick={this.clickHandler}
       >
         {caption}
+          <br/>
+        counter: {helpers.getCounter()}
       </button>
     )
   }
